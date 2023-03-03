@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Jumping Heart</title>
+	<style>
+		.jumping-heart {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			animation: jump 1s ease-in-out infinite;
+		}
+		
+		@keyframes jump {
+			0% {
+				transform: translate(-50%, -50%) scale(1);
+			}
+			50% {
+				transform: translate(-50%, -70%) scale(1.2);
+			}
+			100% {
+				transform: translate(-50%, -50%) scale(1);
+			}
+		}
+		
+		.jumping-heart::before {
+			content: "❤";
+			font-size: 100px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="jumping-heart"></div>
+</body>
+</html>
