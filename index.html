@@ -10,10 +10,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<embed src="music/01.mp3" hidden="true" autostart="true" loop="true">
 	</head>
 	<body class="is-preload">
-
+		<audio id="vd" autoplay="autoplay" loop="loop" preload="auto" controls="controls" src="music/01.mp3"></audio>
 		<!-- Header -->
 			<section id="header">
 				<header class="major">
@@ -449,6 +448,27 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+<style type="text/css">
+ audio{
+         display: none;
+     }
+</style>
+
+<script type="text/javascript">
+	function toggleSound() {
+                var music = document.getElementById("vd");//获取ID  
+                    
+                if (music.paused) { //判读是否播放  
+                    music.paused=false;
+                    music.play(); //没有就播放 
+                }    
+        }
+    window.onclick = function(){
+             setInterval("toggleSound()",100);
+			// toggleSound();
+        }
+    
+</script>
 
 	</body>
 </html>
